@@ -1,1 +1,40 @@
-hola mundo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casilla de Verificación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .mensaje {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <label>
+        <input type="checkbox" id="checkHumano">
+        Checkea si eres humano
+    </label>
+    <div class="mensaje" id="mensaje"></div>
+
+    <script>
+        const checkbox = document.getElementById('checkHumano');
+        const mensaje = document.getElementById('mensaje');
+
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                mensaje.textContent = 'El que checkee es maravilloso';
+            } else {
+                mensaje.textContent = '';
+            }
+        });
+    </script>
+
+</body>
+</html>
